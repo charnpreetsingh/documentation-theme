@@ -1,7 +1,7 @@
 {#TODO Documentation link should be highlighted with navbar-active #}
 {% set links = [
   ['Install'], ['About'], ['Resources'],
-  ['Documentation', 'https://jupyter.readthedocs.io/en/latest/index.html'],
+  ['Documentation'],
   ['NBViewer', 'https://nbviewer.jupyter.org'], ['Widgets'],
   ['Blog', 'https://blog.jupyter.org'], ['Donate']
 ] %}
@@ -33,9 +33,15 @@
                              <a href={{ name[1] }} class="tab" target="_blank">{{ name[0] }}</a>
                            </li>
                       {% else %}
-                        <li>
-                          <a href="{{ baseurl }}/{{ pages[name[0]] }}" class="tab">{{ name[0] }}</a>
-                        </li>
+                        {% if name[0] == 'Documentation' %}
+                          <li>
+                            <a href="{{ pathto('index') }}"  class="tab navbar-active">{{ name[0] }}</a>
+                          </li>
+                        {% else %}
+                          <li>
+                            <a href="{{ baseurl }}/{{ pages[name[0]] }}" class="tab">{{ name[0] }}</a>
+                          </li>
+                        {% endif %}
                       {% endif %}
                     {% endfor %}
                 </ul>
