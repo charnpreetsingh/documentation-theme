@@ -50,8 +50,8 @@ master_doc = 'contents'
 
 # General information about the project.
 project = 'Jupyter Documentation'
-copyright = '2015, Jupyter Team, https://jupyter.org'
-author = 'The Jupyter Team'
+copyright = '2017 Project Jupyter'
+author = 'Project Jupyter'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -95,7 +95,7 @@ html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-html_last_updated_fmt = '%Y-%m-%d'
+html_last_updated_fmt = '%a, %b %d, %Y'
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
