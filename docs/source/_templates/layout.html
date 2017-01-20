@@ -1,4 +1,9 @@
 {% extends "!layout.html" %}
+
+{% set extra_scripts = ["_static/js/bootstrap.js", "_static/js/scroll.js"] %}
+{% set script_files = script_files + extra_scripts %}
+
+
 {% include "navbar.html" %}
 
 {% block relbar1 %}
