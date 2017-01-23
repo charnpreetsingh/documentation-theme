@@ -1,8 +1,6 @@
 {% extends "layout.html" %}
 {% set title = _('Overview') %}
 {% block body %}
-
-
 <section>
     <div class="header header-white">
         <div class="container">
@@ -19,9 +17,12 @@
     <div class="section-grey">
         <div class="container">
             <div class="row">
-                
+
                 <div class="col-md-8 docs-projects-documentation">
                   <h3 class="docs-projects-head">Project Documentation</h3>
+
+                  {% include "searchbox.html" %}
+
                   <div class="dropdown">
                     <div id="interfaces-block" class="col-md-4 col-sm-4 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       <h4 class="docs-project-tile-head docs-project-two-line">Jupyter <br>Interfaces</h4>
@@ -57,14 +58,6 @@
                     <div id="kernels-block" class="col-md-4 col-sm-4 docs-projects-item btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       <h4 class="docs-project-tile-head docs-project-one-line">Kernels</h4>
                     </div>
-                    <ul class="jupyterhub-dropdown-menu docs-dropdown-menu dropdown-menu" aria-labelledby="jupyterhub-block">
-                      <li><a href="#">JupyterHub</a></li>
-                      <li><a href="#">Configurable HTTP Proxy</a></li>
-                      <li><a href="#">DockerSpawner</a></li>
-                      <li><a href="#">IDAPAuthenticator</a></li>
-                      <li><a href="#">OAuthenticator</a></li>
-                      <li><a href="#">SudoSpawner</a></li>
-                    </ul>
                   </div>
                   <div id="conversion-block" class="col-md-4 col-sm-4 docs-projects-item">
                     <h4 class="docs-project-tile-head docs-project-two-line">Conversion & Formatting</h4>
